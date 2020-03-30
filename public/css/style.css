@@ -1,0 +1,23 @@
+body{
+  background-color: #274e55;
+}
+
+.result{
+  font-family: "Century Gothic";
+  color: #f5da9c;
+  background-color: #c76345;
+  text-align: center;
+}
+
+.desc{
+  font-family: "Century Gothic";
+  color: #f5da9c;
+  background-color: #c76345
+}
+
+.title{
+  font-family: "Century Gothic";
+  color: #f5da9c;
+  background-color: #c76345;
+  text-align: center;
+}
