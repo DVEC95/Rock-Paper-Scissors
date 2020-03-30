@@ -1,26 +1,11 @@
 require('sinatra')
 require('sinatra/contrib/all') if development?
 
-get '/rock/scissors' do
-  return 'rock wins'
-end
+require_relative('./models/rock_paper_scissors.rb')
+also_reload('./models/*')
 
-get 'scissors/rock' do
-  return 'rock wins'
-end
-
-get 'rock/paper' do
-  return 'paper wins'
-end
-
-get 'paper/rock' do
-  return 'paper wins'
-end
-
-get 'paper/scissors' do
-  return 'scissors win'
-end
-
-get 'scissors/paper' do
-  return 'scissors win'
+get '/:hand1/:hand2' do
+  hand1 = params['hand1']
+  hand2 = params['hand2']
+  return RockPaperScissors.play(hand1, hand2)
 end
